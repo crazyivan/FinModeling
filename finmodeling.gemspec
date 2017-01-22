@@ -16,7 +16,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency("xbrlware-extras", "1.1.2.19.3")
   gem.add_dependency("nasdaq_query")
 
-  gem.add_dependency("sec_query")
   gem.add_dependency("naive_bayes")
   gem.add_dependency("statsample")
   gem.add_dependency("yahoofinance")
