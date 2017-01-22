@@ -9,7 +9,7 @@ module SecQuery
 
   class Entity
     def write_constructor(filename)
-      FileUtils.mkdir_p(File.dirname(filename)) if !File.exists?(File.dirname(filename))
+      FileUtils.makedirs(File.dirname(filename)) unless File.directory?(File.dirname(filename))
       file = File.open(filename, "w")
       filing_names = []
       @filings.select{ |x| x.title =~ /^10-/ }.each_with_index do |filing, index|

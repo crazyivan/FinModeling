@@ -9,7 +9,6 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/jimlindstrom/FinModeling"
   gem.license       = "MIT"
 
-  gem.add_dependency("fileutils")
   gem.add_dependency("sec_query")
   gem.add_dependency("edgar")
 

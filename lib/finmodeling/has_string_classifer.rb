@@ -13,7 +13,7 @@ module FinModeling
       end
   
       def _load_vectors_and_train(base_filename, vectors)
-        FileUtils.mkdir_p(File.dirname(base_filename)) if !File.exists?(File.dirname(base_filename))
+        FileUtils.makedirs(File.dirname(base_filename)) unless File.directory?(File.dirname(base_filename))
         success = FinModeling::Config.caching_enabled?
         @klasses.each do |cur_klass|
           filename = base_filename + cur_klass.to_s + ".db"

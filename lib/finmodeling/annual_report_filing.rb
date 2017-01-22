@@ -28,7 +28,7 @@ module FinModeling
 
       filing = super(url)
 
-      FileUtils.mkdir_p(CONSTRUCTOR_PATH) if !File.exists?(CONSTRUCTOR_PATH)
+      FileUtils.makedirs(CONSTRUCTOR_PATH) unless File.directory?(CONSTRUCTOR_PATH)
       file = File.open(constructor_file, "w")
       filing.write_constructor(file, "@filing")
       file.close

@@ -318,9 +318,6 @@ Please take a moment to [give me your feedback on the gem](https://docs.google.c
 ##### OSX Mountain Lion
 
 - Install [Homebrew](http://brew.sh/)
-- Install ImageMagick
-
-        brew install imagemagick
 - Edit gsl formula
 
         brew edit gsl
@@ -347,9 +344,6 @@ Please take a moment to [give me your feedback on the gem](https://docs.google.c
         git reset --hard
 
 ##### Ubuntu 13.04
-- Install ImageMagick
-
-        apt-get install imagemagick
 - Install MagickWand Development
 
         apt-get install libmagickwand-dev

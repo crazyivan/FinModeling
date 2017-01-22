@@ -8,7 +8,7 @@ module FinModeling
       CSV_FILE  = File.join(DATA_PATH, "F-F_Research_Data_Factors.csv")
   
       def self.download_data!
-        FileUtils.mkdir_p(DATA_PATH) if !File.exists?(DATA_PATH)
+        FileUtils.makedirs(DATA_PATH) unless File.directory?(DATA_PATH)
         `rm #{ZIP_FILE} #{TXT_FILE} #{CSV_FILE} > /dev/null 2>&1`
         `curl -s -o "#{ZIP_FILE}" "#{URL}"`
         prev_pwd=`pwd`

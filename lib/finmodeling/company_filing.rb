@@ -56,7 +56,7 @@ module FinModeling
     end
   
     def self.download(url)
-      FileUtils.mkdir_p(DOWNLOAD_PATH) if !File.exists?(DOWNLOAD_PATH)
+      FileUtils.makedirs(DOWNLOAD_PATH) unless File.directory?(DOWNLOAD_PATH)
       download_dir = DOWNLOAD_PATH + url.split("/")[-2]
       if !File.exists?(download_dir)
         dl = Xbrlware::Edgar::HTMLFeedDownloader.new()

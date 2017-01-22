@@ -17,7 +17,7 @@ module FinModeling
 
     def save_cached_classifications(base_filename, rows)
       filename = rows_to_filename(base_filename, rows)
-      FileUtils.mkdir_p(File.dirname(filename)) if !File.exists?(File.dirname(filename))
+      FileUtils.makedirs(File.dirname(filename)) unless File.directory?(File.dirname(filename))
       f = File.open(filename, "w")
       rows.each do |row|
         f.puts row.type.to_s
