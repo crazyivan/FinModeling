@@ -16,7 +16,7 @@ module FinModeling
           unzip -q #{ZIP_FILE}; 
           rm #{ZIP_FILE};
           echo "date,RmRf,SMB,HML,Rf" > #{CSV_FILE};
-          grep '^[0-9][0-9][0-9][0-9][0-9][0-9]' #{TXT_FILE} | sed -e 's/  */,/g' | sed -e 's///g' >> #{CSV_FILE};
+          grep '^[0-9][0-9][0-9][0-9][0-9][0-9]' #{TXT_FILE} | sed -e 's/  */,/g' | sed -e 's///g' >> #{CSV_FILE};
           rm #{TXT_FILE};
           cd #{prev_pwd} `
       end
